@@ -3,7 +3,7 @@
 ## About
 Queen's Gambit is a chess app that visualizes available moves against a bot, and saves board progress by `player_name`. 
 
-### Setting up local project
+## Setting up local project
 Read DB backup file into your local environment using:
 ```bash
 psql -d $(local database) -U $(local user) -f backup.sql
