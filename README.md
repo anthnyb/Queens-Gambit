@@ -27,6 +27,5 @@ node app
 ```
 
 ## To Do
-- Refactor front-end with React
+- Refactor front-end 
 - Add user login and settings functionality
-- Deploy 
