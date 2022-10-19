@@ -27,5 +27,5 @@ node app
 ```
 
 ## To Do
-- Refactor front-end 
-- Add user login and settings functionality
+- Refactor front-end into SPA
+- Convert username cookie to login authentication
