@@ -9,23 +9,20 @@ Read DB backup file into your local environment using:
 psql -d $(local database) -U $(local user) -f backup.sql
 ```
 
-Then update /dbcreds.js with your database credentials to finish setup:
+Then update `/dbcreds.js` with your database credentials to finish setup:
 ```javascript
 module.exports = {
-    user: $(local user),
-    password: $(local password),
+    user: $(local_user),
+    password: $(local_password),
     host: "localhost",
-    port: $(local port),
-    database: $(local database)
+    port: 5432,
+    database: $(local_database)
 };
 ```
 
 ### Running the app
-To run app, simply use:
+To run app, use:
 ```bash
 node app
 ```
 
-## To Do
-- Refactor front-end into SPA
-- Convert username cookie to login authentication
