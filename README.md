@@ -6,17 +6,17 @@ Queen's Gambit is a chess app that visualizes available moves against a bot, and
 ## Setting up local project
 Read DB backup file into your local environment using:
 ```bash
-psql -d $(local database) -U $(local user) -f backup.sql
+psql -d $(PG_DATABASE) -U $(PG_USER) -f backup.sql
 ```
 
 Then update `/dbcreds.js` with your database credentials to finish setup:
 ```javascript
 module.exports = {
-    user: $(local_user),
-    password: $(local_password),
+    user: $(PG_USER),
+    password: $(PG_PASSWORD),
     host: "localhost",
     port: 5432,
-    database: $(local_database)
+    database: $(PG_DATABASE)
 };
 ```
 
