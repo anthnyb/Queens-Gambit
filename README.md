@@ -12,11 +12,11 @@ psql -d $(PG_DATABASE) -U $(PG_USER) -f backup.sql
 Then update `/dbcreds.js` with your database credentials to finish setup:
 ```javascript
 module.exports = {
-    user: $(PG_USER),
-    password: $(PG_PASSWORD),
+    user: process.env.PG_USER,
+    password: process.env.PG_PASSWORD,
     host: "localhost",
     port: 5432,
-    database: $(PG_DATABASE)
+    database: process.env.PG_DATABASE
 };
 ```
 
